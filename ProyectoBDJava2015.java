@@ -137,7 +137,7 @@ public class ProyectoBDJava2015 {
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			System.out.print("\n- Ingrese el Nick: ");
 			String id_jugador = br.readLine();
-			String query = "SELECT idpartida,fecha,id2,id,id1,nick FROM partida NATURAL JOIN jugador WHERE id=id1 AND nick='"+id_jugador+"'";
+			String query = "SELECT idpartida,fecha,id2,id,id1,nick FROM partida NATURAL JOIN jugador WHERE (id=id1 OR id=id2) AND (nick='"+id_jugador+"')";
 			ResultSet resultSet1 = statement.executeQuery(query);
 			while(resultSet1.next()) {
 				System.out.print("\ncodigo de partida: " + resultSet1.getString(1));
