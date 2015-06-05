@@ -183,11 +183,11 @@ public class ProyectoBDJava2015 {
 		try {
 			Statement stat1 = connection.createStatement();
 			Statement stat2 = connection.createStatement();
-			String query = "SELECT DISTINCT nick FROM partida natural join jugador where id=id1";
+			String query = "SELECT DISTINCT nick FROM partida natural join jugador where id=id1 or id=id2";
 			ResultSet resultSet1 = stat1.executeQuery(query);
 			while(resultSet1.next()) {
 				String nick = resultSet1.getString(1);
-				String query1 = "select MAX(TIMEDIFF(horaFin,HoraInicio)) from partida natural join jugador where (id=id1) and nick='"+nick+"'";
+				String query1 = "select MAX(TIMEDIFF(horaFin,HoraInicio)) from partida natural join jugador where (id=id1 or id=id2) and nick='"+nick+"'";
 				ResultSet resultSet2 = stat2.executeQuery(query1);
 				while(resultSet2.next()){
 					System.out.println("- "+nick+" su partida mas larga fue de "+resultSet2.getString(1)+"");
