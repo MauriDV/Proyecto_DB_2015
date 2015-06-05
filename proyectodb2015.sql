@@ -134,8 +134,8 @@ INSERT INTO jugador (id,nick,email,nombreAPellido,fechaNac,edad) VALUES
 
 /*Inserta en la tabla partida*/
 INSERT INTO partida(idpartida,resultado,estado,fecha,fila,columna,horaInicio,horaFin,id1,id2) VALUES
-(3,'Empate',true,'2015-02-02',8,8,'15:00','16:00',1,2),
-(4,'Perder',true,'2015-02-02',8,8,'15:00','16:00',3,4),
+(3,'Ganador',true,'2015-02-02',8,8,'15:00','16:00',1,2),
+(4,'Ganador',true,'2015-02-02',8,8,'15:00','16:00',3,4),
 (5,'Ganador',true,'2015-02-03',8,7,'14:00','14:15',1,5);
 
 
