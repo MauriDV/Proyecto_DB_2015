@@ -1,55 +1,19 @@
 import java.io.*;
 import java.util.*;
 import java.sql.*;
-import javax.swing.*;
-import java.awt.event.*;
 
-public class ProyectoBDJava2015 extends JFrame implements ActionListener{
+public class ProyectoBDJava2015 {
 
-
-
-
-	private JFrame mainFrame;
-	private JButton boton1,boton2,boton3,boton4,boton5,boton6;
-	private int ancho = 300;
 	public ProyectoBDJava2015() {
-		setLayout(null);
-		boton1 = new JButton("INSERTAR");
-		boton2 = new JButton("ELIMINAR");
-		boton3 = new JButton("LISTAR");
-		boton4 = new JButton("LISTAR POR JUGADOR");
-		boton5 = new JButton("PARTIDAS GANADAS POR JUGADOR");
-		boton6 = new JButton("PARTIDAS MAS LARGAS POR JUGADOR");
-		boton1.setBounds(10,10,ancho,40);
-		boton2.setBounds(10,60,ancho,40);
-		boton3.setBounds(10,110,ancho,40);
-		boton4.setBounds(10,160,ancho,40);
-		boton5.setBounds(10,210,ancho,40);
-		boton6.setBounds(10,260,ancho,40);
-		add(boton1);
-		add(boton2);
-		add(boton3);
-		add(boton4);
-		add(boton5);
-		add(boton6);
-		boton1.addActionListener(this);
 		try {
 			jbInit();
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	public static void main(String[] args) {
-		ProyectoBDJava2015 ventana=new ProyectoBDJava2015();
-		ventana.setBounds(500,250,325,340);
-		ventana.setVisible(true);
-		ventana.setResizable(false);
-		ventana.setDefaultCloseOperation(ProyectoBDJava2015.EXIT_ON_CLOSE);
-		ventana.setTitle("PROYECTO BASE DE DATOS 2015");
-
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // Buffer usado para leer lo ingresado por teclado.
 			String driver = "com.mysql.jdbc.Driver";
@@ -101,12 +65,6 @@ public class ProyectoBDJava2015 extends JFrame implements ActionListener{
 			System.err.println("Error I/O");
 		}
 	}
-
-	public void actionPerformed(ActionEvent e, Statement statement) {
-        if (e.getSource()==boton1) {
-            listar(statement);
-        }
-    }
 
 	private void jbInit() throws Exception {
 	}
