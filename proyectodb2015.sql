@@ -1,12 +1,3 @@
-/*	Proyecto BASE DE DATOS 2015 : 
-	INTEGRANTES : Delle Vedove Mauricio,
-				  Roig Francisco,
-				  Rondeau Matias
-
-	Modela la Base de datos del Juego
-	"Cuatro En Linea"
- */
-
 DROP TABLE IF EXISTS tiene;
 DROP TABLE IF EXISTS celda;
 DROP TABLE IF EXISTS auditoria_Eliminados;
